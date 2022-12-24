@@ -1,0 +1,48 @@
+{
+  "name": "esbuild-vanilla-ts-lib-starter",
+  "displayName": "ESBuild TS Library Starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "esbuild-base": "esbuild src/main.ts --outfile=dist/lib.js --bundle",
+    "compile": "rimraf dist && npm run esbuild-base --",
+    "dev": "npm run compile -- --sourcemap --watch",
+    "build": "npm run compile -- --minify",
+    "test:coverage": "rimraf coverage && vitest run --coverage",
+    "test": "vitest run",
+    "lint": "eslint . --ext ts",
+    "format": "prettier . --write"
+  },
+  "keywords": [
+    "template",
+    "esbuild",
+    "typescript"
+  ],
+  "author": {
+    "name": "nobkd",
+    "url": "https://github.com/nobkd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nobkd/esbuild-vanilla-ts-lib-starter.git"
+  },
+  "homepage": "https://github.com/nobkd/esbuild-vanilla-ts-lib-starter#readme",
+  "bugs": {
+    "url": "https://github.com/nobkd/esbuild-vanilla-ts-lib-starter/issues"
+  },
+  "license": "BlueOak-1.0.0",
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "@vitest/coverage-c8": "^0.26.2",
+    "esbuild": "^0.16.10",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4",
+    "vitest": "^0.26.2"
+  }
+}
