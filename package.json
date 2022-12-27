@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/nobkd/esbuild-vanilla-ts-lib-starter/issues"
   },
-  "license": "BlueOak-1.0.0",
+  "license": "Unlicense",
   "devDependencies": {
     "@types/node": "^18.11.17",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
