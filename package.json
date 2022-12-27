@@ -1,18 +1,19 @@
 {
   "name": "esbuild-vanilla-ts-lib-starter",
-  "displayName": "ESBuild TS Library Starter",
+  "displayName": "ESBuild Vanilla TypeScript Library Starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A library starter for typescript with esbuild",
   "main": "src/main.ts",
   "scripts": {
     "esbuild-base": "esbuild src/main.ts --outfile=dist/lib.js --bundle",
     "compile": "rimraf dist && npm run esbuild-base --",
     "dev": "npm run compile -- --sourcemap --watch",
     "build": "npm run compile -- --minify",
-    "test:coverage": "rimraf coverage && vitest run --coverage",
     "test": "vitest run",
+    "test:coverage": "rimraf coverage && vitest run --coverage",
     "lint": "eslint . --ext ts",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "clean": "rimraf coverage dist"
   },
   "keywords": [
     "template",
